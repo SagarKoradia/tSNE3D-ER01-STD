@@ -17,7 +17,7 @@ my_data_scaled = scaler.transform(my_data)
 model.fit(my_data_scaled)
 labels = model.predict(my_data_scaled)
 
-model = TSNE(n_components=3, perplexity=5, learning_rate=100, n_iter=1000, random_state=0)
+model = TSNE(n_components=3, perplexity=50, learning_rate=100, n_iter=1000, random_state=0)
 transformed = model.fit_transform(my_data_scaled)
 xs = transformed[:, 0]
 ys = transformed[:, 1]
